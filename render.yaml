@@ -1,21 +1,21 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: posterose
+    databaseName: posterose
+    user: posterose_user
     plan: free
 
 services:
   - type: web
-    name: mysite
+    name: posterose
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
     # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
     startCommand: "./bin/rails server"
     envVars:
-      - key: DATABASE_URL
+      - key: postgres://posterose_user:Wm8Y1cbdSEgeDz5QPXt7yW7xdUyeX7nu@dpg-cm25cjmn7f5s73esc66g-a.oregon-postgres.render.com/posterose
         fromDatabase:
-          name: mysite
+          name: posterose
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
