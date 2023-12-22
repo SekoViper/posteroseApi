@@ -8,7 +8,7 @@ Welcome to the Posterose News API (Version 1). This API allows you to manage new
 
 The base URL for all API endpoints is:
 
-`[https://posterose.onrender.com/api/v1](https://posterose.onrender.com/api/v1)`
+`[https://posterose.onrender.com]`
 
 # Endpoints
 
